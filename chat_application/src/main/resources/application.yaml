@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  servlet:
+    context-path:
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat_application_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+  devtools:
+    restart:
+      enabled: true
+      exclude:
+        - static/**
+        - public/**
+        - templates/**
+    livereload:
+      enabled: true
+
+jwt:
+  SECRET_KEY: "7aaee61374f294a2f39ae0770360adcaca167033d6b7ae46798194e8878e9d59211d53be27ce4dbfc6af1c2e59ef4fb7a082a87a15106eedc8adafa6c43ab6592225de2e622944012e21ccbec159ccb2da78acdbb55da998a7236e2e3c2e10fc91c36200cb1eb40f0787dfe722ab06fbe75a67b5223b079d1dc4650f184f87019fa3336018f19ea1b9ece9c73b0086a36c846289fc63393c5349c92158ec2d3c04084c09ecc0abdbbfe5c3514ef8b7c7a2c32d465f08c7354b1bf91baa87cedd072e8839cb4ef33af938bd2fd45e7364604c29fcfa2bcf0075446bce5640818cdec64aedc156a271c6ce9959809c306b425ed8392533538390e7652d66f9d49f"
